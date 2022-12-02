@@ -1,0 +1,35 @@
+load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
+
+py_library(
+    name = "hello_test_rules",
+    srcs = [
+        "__init__.py",
+        "greeter.py",
+    ],
+    imports = ["../../.."],
+    visibility = ["//:__subpackages__"],
+)
+
+py_binary(
+    name = "hello_test_rules_bin",
+    srcs = ["__main__.py"],
+    imports = ["../../.."],
+    main = "__main__.py",
+    visibility = ["//:__subpackages__"],
+    deps = [
+        ":hello_test_rules",
+        "@pypi_absl_py//:pkg",
+    ],
+)
+
+py_test(
+    name = "hello_test_rules_test",
+    srcs = [
+        "__test__.py",
+        "greeter_test.py",
+        "test_greeter.py",
+    ],
+    imports = ["../../.."],
+    main = "__test__.py",
+    deps = [":hello_test_rules"],
+)

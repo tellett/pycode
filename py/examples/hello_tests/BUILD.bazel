@@ -1,0 +1,24 @@
+load("@rules_python//python:defs.bzl", "py_binary", "py_library")
+
+py_library(
+    name = "hello_tests",
+    srcs = [
+        "__init__.py",
+        "greeter.py",
+        "greeter_test.py",
+    ],
+    imports = ["../../.."],
+    visibility = ["//:__subpackages__"],
+)
+
+py_binary(
+    name = "hello_tests_bin",
+    srcs = ["__main__.py"],
+    imports = ["../../.."],
+    main = "__main__.py",
+    visibility = ["//:__subpackages__"],
+    deps = [
+        ":hello_tests",
+        "@pypi_absl_py//:pkg",
+    ],
+)

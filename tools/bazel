@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+bazelisk=$(which bazelisk)
+if [[ ! -z $bazelisk ]]; then
+  exec $bazelisk $@
+fi

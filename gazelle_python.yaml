@@ -1,0 +1,37 @@
+# GENERATED FILE - DO NOT EDIT!
+#
+# To update this file, run:
+#   bazel run //:gazelle_python_manifest.update
+
+manifest:
+  modules_mapping:
+    absl: absl_py
+    absl.__init__: absl_py
+    absl.app: absl_py
+    absl.command_name: absl_py
+    absl.flags: absl_py
+    absl.flags.__init__: absl_py
+    absl.flags._argument_parser: absl_py
+    absl.flags._defines: absl_py
+    absl.flags._exceptions: absl_py
+    absl.flags._flag: absl_py
+    absl.flags._flagvalues: absl_py
+    absl.flags._helpers: absl_py
+    absl.flags._validators: absl_py
+    absl.flags._validators_classes: absl_py
+    absl.flags.argparse_flags: absl_py
+    absl.logging: absl_py
+    absl.logging.__init__: absl_py
+    absl.logging.converter: absl_py
+    absl.testing: absl_py
+    absl.testing.__init__: absl_py
+    absl.testing._bazelize_command: absl_py
+    absl.testing._pretty_print_reporter: absl_py
+    absl.testing.absltest: absl_py
+    absl.testing.flagsaver: absl_py
+    absl.testing.parameterized: absl_py
+    absl.testing.xml_reporter: absl_py
+  pip_repository:
+    name: pypi
+    incremental: true
+integrity: 8a3612b67c2fb8eb81a5401ddf441abdd8006be523856f65b673a141839aa1f4
