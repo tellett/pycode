@@ -2,7 +2,6 @@ from absl import app
 from absl import flags
 from absl import logging
 
-# FIXME(me): relative imports aren't working... /shrug
 from py.examples.hello_tests.greeter import Greeter
 
 # most of the below was shamelessly stolen from https://abseil.io/docs/python/quickstart
@@ -23,5 +22,5 @@ def main(argv):
   for i in range(0, FLAGS.num_times):
     logging.info(greeter_obj.Greet())
 
-if __name__ == '__main__':
-  app.run(main)
+
+app.run(main)
