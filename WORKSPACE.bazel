@@ -40,11 +40,12 @@ gazelle_dependencies(go_repository_default_config = "@//:WORKSPACE.bazel")
 ######################################################################
 # Python Support
 
+
 http_archive(
     name = "rules_python",
-    sha256 = "8c8fe44ef0a9afc256d1e75ad5f448bb59b81aba149b8958f02f7b3a98f5d9b4",
-    strip_prefix = "rules_python-0.13.0",
-    url = "https://github.com/bazelbuild/rules_python/archive/refs/tags/0.13.0.tar.gz",
+    sha256 = "bc4e59e17c7809a5b373ba359e2c974ed2386c58634819ac5a89c0813c15705c",
+    strip_prefix = "rules_python-0.15.1",
+    url = "https://github.com/bazelbuild/rules_python/archive/refs/tags/0.15.1.tar.gz",
 )
 
 # This next chunk pulls in a hermetic python toolchain.
